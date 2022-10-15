@@ -110,6 +110,42 @@ string Replase(string text, char oldValue, char newValue)
 // Console.WriteLine();
 // newText = Replase(newText, 'С', 'с');
 // Console.WriteLine(newText);
+
+//-------------------------------------------------------
+// Console.Clear();
+// int[] arr = { 1, 5, 4, 3, 2, 6, 7, 1, 1 };
+// void PrintArray(int[] array)
+// {
+//     int count = array.Length;
+
+//     for (int i = 0; i < count; i++)
+//     {
+//         Console.Write($"{array[i]} ");
+//     }
+//     Console.WriteLine();
+// }
+
+// void SelectionSort(int[] array)
+// {
+//     for (int i = 0; i < array.Length - 1; i++)
+//     {
+//         int minPosition = i;
+
+//         for (int j = i + 1; j < array.Length; j++)
+//         {
+//             if (array[j] < array[minPosition]) minPosition = j; // ищем минимальный элемент
+
+//         }
+
+//         int temporary = array[i];
+//         array[i] = array[minPosition];
+//         array[minPosition] = temporary;
+//     }
+// }
+// PrintArray(arr);
+// SelectionSort(arr);
+// PrintArray(arr);
+
 Console.Clear();
 int[] arr = { 1, 5, 4, 3, 2, 6, 7, 1, 1 };
 void PrintArray(int[] array)
@@ -127,17 +163,17 @@ void SelectionSort(int[] array)
 {
     for (int i = 0; i < array.Length - 1; i++)
     {
-        int minPosition = i;
+        int maxPosition = i;
 
         for (int j = i + 1; j < array.Length; j++)
         {
-            if (array[j] < array[minPosition]) minPosition = j;
+            if (array[j] > array[maxPosition]) maxPosition = j; // ищем максимальный элемент
 
         }
 
         int temporary = array[i];
-        array[i] = array[minPosition];
-        array[minPosition] = temporary;
+        array[i] = array[maxPosition];
+        array[maxPosition] = temporary;
     }
 }
 PrintArray(arr);
